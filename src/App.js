@@ -37,8 +37,7 @@ export default function App() {
         <a className="navbar-brand" href="#">Integration Testing Challenge</a>
       </nav>
       <div className="App">
-        {/* <Display displayFun={displayFunc}/> */}
-        <Show show={exampleData} selectedSeason='1' />
+        <Display displayFun={displayFunc}/>
       </div>
     </div>
   );

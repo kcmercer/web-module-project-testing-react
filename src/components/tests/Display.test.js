@@ -2,8 +2,12 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-// import fetchShow from '../../api/fetchShow';
+
+// import { fetchShow } from '../../api/fetchShow';
 // jest.mock('../../api/fetchShow');
+
+// Mock isn't reaching the API for some reason, can not find anything about it online.
+// I have been unable to get the console.log() in the fetchShow api file to fire at any point.
 
 import Display from './../Display';
 
@@ -12,8 +16,21 @@ test('renders without errors with no props', ()=>{
 });
 
 test('renders Show component when the button is clicked ', async ()=>{
-    // fetchShow().mockResolvedValue({
-    //     status: 'complete'
+    // fetchShow.mockResolvedValue({
+    //     name: 'This is a test show',
+    //     summary: 'This is a test summary',
+    //     seasons: [
+    //         {id: 1, name: 'Season 1', episodes: [{
+    //             id: 1,
+    //             image: '',
+    //             name: 'This is a test name',
+    //             season: 1,
+    //             number: 1,
+    //             summary: 'This is a test summary',
+    //             runtime: 1}]},
+    //         {id: 2, name: 'Season 2', episodes: []},
+    //         {id: 3, name: 'Season 3', episodes: []},
+    //     ]
     // });
 
     render(<Display />);
